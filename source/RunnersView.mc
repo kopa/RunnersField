@@ -9,12 +9,18 @@ class RunnersView extends Ui.DataField {
 
     var CENTER = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
     var AVERAGE_SAMPLE_SIZE = 10;
-    var tenSecondsPace = "0:00";
-    var averageInfoPace = "0:00";
+    var HEADER_FONT = Graphics.FONT_XTINY;
+    var VALUE_FONT = Graphics.FONT_NUMBER_MILD;
+    var ZERO_TIME = "0:00";
+    var ZERO_DISTANCE = "0.00";
+    
     var paceData = new DataQueue(AVERAGE_SAMPLE_SIZE);
+    
+    var tenSecondsPace = ZERO_TIME;
+    var averageInfoPace = ZERO_TIME;
     var hr = 0;
-    var distance = "0.0";
-    var elapsedTime = "0:0";
+    var distance = ZERO_DISTANCE;
+    var elapsedTime = ZERO_TIME;
     var battery = 0;
     var x;
     var y;
@@ -73,24 +79,24 @@ class RunnersView extends Ui.DataField {
 
     function drawHeaders(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.drawText(x, 13, Graphics.FONT_XTINY, "time", CENTER);
-        dc.drawText(dc.getWidth() / 6, y / 1.6, Graphics.FONT_XTINY, "pace", CENTER);
-        dc.drawText(dc.getWidth() / 4, y + (y / 8.6), Graphics.FONT_XTINY, "avg pace", CENTER);
-        dc.drawText(x, y / 1.6, Graphics.FONT_XTINY, "hr", CENTER); 
-        dc.drawText(dc.getWidth() * 0.80, y / 1.6, Graphics.FONT_XTINY, "distance", CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y + (y / 8.6), Graphics.FONT_XTINY, "timer", CENTER);
-        dc.drawText(x, y2 + 13, Graphics.FONT_XTINY, "battery", CENTER);
+        dc.drawText(x, 9, HEADER_FONT, "time", CENTER);
+        dc.drawText(dc.getWidth() / 6, y / 1.7, HEADER_FONT, "pace", CENTER);
+        dc.drawText(dc.getWidth() / 4, y + (y / 8.8), HEADER_FONT, "avg pace", CENTER);
+        dc.drawText(x, y / 1.7, HEADER_FONT, "hr", CENTER); 
+        dc.drawText(dc.getWidth() * 0.80, y / 1.7, HEADER_FONT, "distance", CENTER);
+        dc.drawText(dc.getWidth() * 0.75, y + (y / 8.8), HEADER_FONT, "timer", CENTER);
+        dc.drawText(x, y2 + 9, HEADER_FONT, "battery", CENTER);
     }
     
     function drawValues(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.drawText(x, 33, Graphics.FONT_MEDIUM, getFormattedDate(Time.now()), CENTER);
-        dc.drawText(dc.getWidth() / 6, y / 1.2, Graphics.FONT_MEDIUM, tenSecondsPace, CENTER);
-        dc.drawText(x, y / 1.2, Graphics.FONT_MEDIUM, hr.format("%d"), CENTER);
-        dc.drawText(dc.getWidth() / 4, y + (y / 3.2), Graphics.FONT_MEDIUM, averageInfoPace, CENTER);
-        dc.drawText(dc.getWidth() * 0.80, y / 1.2, Graphics.FONT_MEDIUM, distance, CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y + (y / 3.2), Graphics.FONT_MEDIUM, elapsedTime, CENTER);
-        dc.drawText(x + 25, y2 + 29, Graphics.FONT_XTINY, format("$1$%", [battery.format("%d")]), CENTER);
+        dc.drawText(x, 33, VALUE_FONT, getFormattedDate(Time.now()), CENTER);
+        dc.drawText(dc.getWidth() / 6, y / 1.2, VALUE_FONT, tenSecondsPace, CENTER);
+        dc.drawText(x, y / 1.2, VALUE_FONT, hr.format("%d"), CENTER);
+        dc.drawText(dc.getWidth() / 4, y + (y / 3.1), VALUE_FONT, averageInfoPace, CENTER);
+        dc.drawText(dc.getWidth() * 0.80, y / 1.2, VALUE_FONT, distance, CENTER);
+        dc.drawText(dc.getWidth() * 0.75, y + (y / 3.1), VALUE_FONT, elapsedTime, CENTER);
+        dc.drawText(x + 25, y2 + 29, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
         drawBattery(dc);
         
     }
@@ -115,7 +121,7 @@ class RunnersView extends Ui.DataField {
             averageInfoPace = getMinutesPerKm(info.averageSpeed);
         } else {
             paceData.reset();
-            tenSecondsPace = "0:00";
+            tenSecondsPace = ZERO_TIME;
         }
     }
     
@@ -128,7 +134,7 @@ class RunnersView extends Ui.DataField {
     }
 
     function calculateDistance(info) {
-        if (info.elapsedDistance != null) {
+        if (info.elapsedDistance != null && info.elapsedDistance > 0) {
             var distanceKm = info.elapsedDistance / 1000;
             var distanceFullString = distanceKm.toString();
             var commaPos = distanceFullString.find(".");
@@ -136,8 +142,8 @@ class RunnersView extends Ui.DataField {
         }
     }
     
-    function calculateElapsedTime(info) {   
-        if (info.elapsedTime != null) {
+    function calculateElapsedTime(info) {
+        if (info.elapsedTime != null && info.elapsedTime > 0) {
             var hours = null;
             var minutes = info.elapsedTime / 1000 / 60;
             var seconds = info.elapsedTime / 1000 % 60;
@@ -160,11 +166,14 @@ class RunnersView extends Ui.DataField {
     }
 
     function getMinutesPerKm(speedMetersPerSecond) {
-        var metersPerMinute = speedMetersPerSecond * 60.0;
-        var minutesPerKmDecimal = 1000.0 / metersPerMinute;
-        var minutesPerKmFloor = minutesPerKmDecimal.toNumber();
-        var seconds = (minutesPerKmDecimal - minutesPerKmFloor) * 60;
-        return minutesPerKmDecimal.format("%2d") + ":" + seconds.format("%02d"); 
+        if (speedMetersPerSecond > 0.0) {
+            var metersPerMinute = speedMetersPerSecond * 60.0;
+            var minutesPerKmDecimal = 1000.0 / metersPerMinute;
+            var minutesPerKmFloor = minutesPerKmDecimal.toNumber();
+            var seconds = (minutesPerKmDecimal - minutesPerKmFloor) * 60;
+            return minutesPerKmDecimal.format("%2d") + ":" + seconds.format("%02d");
+        }
+        return ZERO_TIME;
     }
     
     function computeAverageSpeed() {
@@ -172,9 +181,14 @@ class RunnersView extends Ui.DataField {
         var data = paceData.getData();
         var sumOfData = 0.0;
         for (var i = 0; i < s; i++) {
-            sumOfData = sumOfData + data[i];
+            if (data[i] != null) {
+                sumOfData = sumOfData + data[i];
+            }
         }
-        return sumOfData / s;
+        if (sumOfData > 0) {
+            return sumOfData / s;
+        }
+        return 0.0;
     }
     
     function getFormattedDate(moment) {
