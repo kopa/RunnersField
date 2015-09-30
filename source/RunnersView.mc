@@ -12,6 +12,7 @@ class RunnersView extends Ui.DataField {
     var tenSecondsPace = "0:00";
     var averageInfoPace = "0:00";
     var paceData = new DataQueue(AVERAGE_SAMPLE_SIZE);
+    var hr = 0;
     var distance = "0.0";
     var elapsedTime = "0.0";
     var battery = 0;
@@ -27,6 +28,8 @@ class RunnersView extends Ui.DataField {
     function compute(info) {
         
         calculatePace(info);
+        
+        calculateHeartRate(info);
         
         calculateDistance(info);
         
@@ -62,16 +65,19 @@ class RunnersView extends Ui.DataField {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_WHITE);
         dc.drawLine(0, y1, dc.getWidth(), y1);
         dc.drawLine(0, y, dc.getWidth(), y);
-        dc.drawLine(x, y1, x, dc.getHeight() - y1); 
+        dc.drawLine(x, y, x, y2);
+        dc.drawLine(x-30, y1, x-30, y); 
+        dc.drawLine(x+30, y1, x+30, y); 
         dc.drawLine(0, y2, dc.getWidth(), y2);      
     }
 
     function drawHeaders(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         dc.drawText(x, 13, Graphics.FONT_XTINY, "time", CENTER);
-        dc.drawText(dc.getWidth() / 4, y / 1.6, Graphics.FONT_XTINY, "pace", CENTER);
+        dc.drawText(dc.getWidth() / 6, y / 1.6, Graphics.FONT_XTINY, "pace", CENTER);
         dc.drawText(dc.getWidth() / 4, y + (y / 8.6), Graphics.FONT_XTINY, "avg pace", CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y / 1.6, Graphics.FONT_XTINY, "distance", CENTER);
+        dc.drawText(x, y / 1.6, Graphics.FONT_XTINY, "hr", CENTER); 
+        dc.drawText(dc.getWidth() * 0.80, y / 1.6, Graphics.FONT_XTINY, "distance", CENTER);
         dc.drawText(dc.getWidth() * 0.75, y + (y / 8.6), Graphics.FONT_XTINY, "timer", CENTER);
         dc.drawText(x, y2 + 13, Graphics.FONT_XTINY, "battery", CENTER);
     }
@@ -79,9 +85,10 @@ class RunnersView extends Ui.DataField {
     function drawValues(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         dc.drawText(x, 33, Graphics.FONT_MEDIUM, getFormattedDate(Time.now()), CENTER);
-        dc.drawText(dc.getWidth() / 4, y / 1.2, Graphics.FONT_MEDIUM, tenSecondsPace, CENTER);
+        dc.drawText(dc.getWidth() / 6, y / 1.2, Graphics.FONT_MEDIUM, tenSecondsPace, CENTER);
+        dc.drawText(x, y / 1.2, Graphics.FONT_MEDIUM, hr.format("%d"), CENTER);
         dc.drawText(dc.getWidth() / 4, y + (y / 3.2), Graphics.FONT_MEDIUM, averageInfoPace, CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y / 1.2, Graphics.FONT_MEDIUM, distance, CENTER);
+        dc.drawText(dc.getWidth() * 0.80, y / 1.2, Graphics.FONT_MEDIUM, distance, CENTER);
         dc.drawText(dc.getWidth() * 0.75, y + (y / 3.2), Graphics.FONT_MEDIUM, elapsedTime, CENTER);
         dc.drawText(x + 25, y2 + 29, Graphics.FONT_XTINY, format("$1$%", [battery.format("%d")]), CENTER);
         drawBattery(dc);
@@ -109,6 +116,14 @@ class RunnersView extends Ui.DataField {
         } else {
             paceData.reset();
             tenSecondsPace = "0:00";
+        }
+    }
+    
+    function calculateHeartRate(info) {
+        if (info.currentHeartRate != null) {
+            hr = info.currentHeartRate;
+        } else {
+            hr = 0;
         }
     }
 

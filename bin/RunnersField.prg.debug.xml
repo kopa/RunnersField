@@ -15,85 +15,93 @@
 <entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\DataQueue.mc" lineNum="40" pc="268435681" symbol="getData"/>
 <entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\DataQueue.mc" lineNum="45" pc="268435693" symbol="getSize"/>
 <entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersField.mc" lineNum="12" pc="268435711" symbol="getInitialView"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="29" pc="268435755" symbol="compute"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="31" pc="268435769" symbol="compute"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="33" pc="268435783" symbol="compute"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="35" pc="268435797" symbol="compute"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="40" pc="268435812" symbol="onUpdate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="42" pc="268435826" symbol="onUpdate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="44" pc="268435840" symbol="onUpdate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="49" pc="268435857" symbol="onLayout"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="50" pc="268435882" symbol="onLayout"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="51" pc="268435907" symbol="onLayout"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="52" pc="268435935" symbol="onLayout"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="62" pc="268435963" symbol="drawGrid"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="63" pc="268435999" symbol="drawGrid"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="64" pc="268436043" symbol="drawGrid"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="65" pc="268436087" symbol="drawGrid"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="66" pc="268436143" symbol="drawGrid"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="70" pc="268436190" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="71" pc="268436226" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="72" pc="268436276" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="73" pc="268436344" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="74" pc="268436421" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="75" pc="268436489" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="76" pc="268436566" symbol="drawHeaders"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="80" pc="268436628" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="81" pc="268436664" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="82" pc="268436735" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="83" pc="268436806" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="84" pc="268436886" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="85" pc="268436957" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="86" pc="268437037" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="87" pc="268437149" symbol="drawValues"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="92" pc="268437166" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="93" pc="268437216" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="94" pc="268437266" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="95" pc="268437302" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="96" pc="268437335" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="99" pc="268437401" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="100" pc="268437437" symbol="drawBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="104" pc="268437490" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="105" pc="268437500" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="106" pc="268437507" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="107" pc="268437533" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="108" pc="268437563" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="110" pc="268437593" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="111" pc="268437611" symbol="calculatePace"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="116" pc="268437627" symbol="calculateDistance"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="117" pc="268437640" symbol="calculateDistance"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="118" pc="268437656" symbol="calculateDistance"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="119" pc="268437669" symbol="calculateDistance"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="120" pc="268437687" symbol="calculateDistance"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="125" pc="268437725" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="126" pc="268437738" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="127" pc="268437741" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="128" pc="268437763" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="130" pc="268437785" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="131" pc="268437796" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="132" pc="268437806" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="135" pc="268437819" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="136" pc="268437826" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="138" pc="268437876" symbol="calculateElapsedTime"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="144" pc="268437952" symbol="calculateBattery"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="148" pc="268437984" symbol="getMinutesPerKm"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="149" pc="268437994" symbol="getMinutesPerKm"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="150" pc="268438004" symbol="getMinutesPerKm"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="151" pc="268438017" symbol="getMinutesPerKm"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="152" pc="268438030" symbol="getMinutesPerKm"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="156" pc="268438073" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="157" pc="268438092" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="158" pc="268438111" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="159" pc="268438118" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="160" pc="268438133" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="162" pc="268438156" symbol="computeAverageSpeed"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="166" pc="268438165" symbol="getFormattedDate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="167" pc="268438189" symbol="getFormattedDate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="168" pc="268438259" symbol="getFormattedDate"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="10" pc="268438301" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="14" pc="268438334" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="5" pc="268438405" symbol="&lt;init&gt;"/>
-<entry filename="Rez" lineNum="10" pc="268438392" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="30" pc="268435755" symbol="compute"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="32" pc="268435769" symbol="compute"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="34" pc="268435783" symbol="compute"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="36" pc="268435797" symbol="compute"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="38" pc="268435811" symbol="compute"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="43" pc="268435826" symbol="onUpdate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="45" pc="268435840" symbol="onUpdate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="47" pc="268435854" symbol="onUpdate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="52" pc="268435871" symbol="onLayout"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="53" pc="268435896" symbol="onLayout"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="54" pc="268435921" symbol="onLayout"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="55" pc="268435949" symbol="onLayout"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="65" pc="268435977" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="66" pc="268436013" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="67" pc="268436057" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="68" pc="268436101" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="69" pc="268436145" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="70" pc="268436201" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="71" pc="268436257" symbol="drawGrid"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="75" pc="268436304" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="76" pc="268436340" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="77" pc="268436390" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="78" pc="268436458" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="79" pc="268436535" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="80" pc="268436594" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="81" pc="268436662" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="82" pc="268436739" symbol="drawHeaders"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="86" pc="268436801" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="87" pc="268436837" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="88" pc="268436908" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="89" pc="268436979" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="90" pc="268437055" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="91" pc="268437135" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="92" pc="268437206" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="93" pc="268437286" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="94" pc="268437398" symbol="drawValues"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="99" pc="268437415" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="100" pc="268437465" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="101" pc="268437515" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="102" pc="268437551" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="103" pc="268437584" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="106" pc="268437650" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="107" pc="268437686" symbol="drawBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="111" pc="268437739" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="112" pc="268437749" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="113" pc="268437756" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="114" pc="268437782" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="115" pc="268437812" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="117" pc="268437842" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="118" pc="268437860" symbol="calculatePace"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="123" pc="268437876" symbol="calculateHeartRate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="124" pc="268437889" symbol="calculateHeartRate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="126" pc="268437908" symbol="calculateHeartRate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="131" pc="268437924" symbol="calculateDistance"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="132" pc="268437937" symbol="calculateDistance"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="133" pc="268437953" symbol="calculateDistance"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="134" pc="268437966" symbol="calculateDistance"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="135" pc="268437984" symbol="calculateDistance"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="140" pc="268438022" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="141" pc="268438035" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="142" pc="268438038" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="143" pc="268438060" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="145" pc="268438082" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="146" pc="268438093" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="147" pc="268438103" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="150" pc="268438116" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="151" pc="268438123" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="153" pc="268438173" symbol="calculateElapsedTime"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="159" pc="268438249" symbol="calculateBattery"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="163" pc="268438281" symbol="getMinutesPerKm"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="164" pc="268438291" symbol="getMinutesPerKm"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="165" pc="268438301" symbol="getMinutesPerKm"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="166" pc="268438314" symbol="getMinutesPerKm"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="167" pc="268438327" symbol="getMinutesPerKm"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="171" pc="268438370" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="172" pc="268438389" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="173" pc="268438408" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="174" pc="268438415" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="175" pc="268438430" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="177" pc="268438453" symbol="computeAverageSpeed"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="181" pc="268438462" symbol="getFormattedDate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="182" pc="268438486" symbol="getFormattedDate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="183" pc="268438556" symbol="getFormattedDate"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="10" pc="268438598" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Users\\IEUser\\workspace\\RunnersField\\source\\RunnersView.mc" lineNum="14" pc="268438631" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="5" pc="268438702" symbol="&lt;init&gt;"/>
+<entry filename="Rez" lineNum="10" pc="268438689" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8389359" symbol="&lt;gre&gt;"/>
@@ -141,7 +149,7 @@
 <entry id="8389548" symbol="&lt;tha&gt;"/>
 <entry field="true" id="8388807" symbol="BLE_REQUEST_TOO_LARGE"/>
 <entry id="8388819" method="true" symbol="makeImageRequest"/>
-<entry id="37" module="true" symbol="Menus"/>
+<entry id="39" module="true" symbol="Menus"/>
 <entry id="3" module="true" symbol="globals_Rez_Drawables"/>
 <entry id="8388630" module="true" symbol="Toybox_Position"/>
 <entry id="8389354" symbol="&lt;dut&gt;"/>
@@ -188,7 +196,7 @@
 <entry id="8388659" method="true" symbol="testAbs"/>
 <entry field="true" id="8388989" symbol="dutyCycle"/>
 <entry id="8389043" object="true" symbol="ProgressBar"/>
-<entry field="true" id="40" symbol="AppName"/>
+<entry field="true" id="42" symbol="AppName"/>
 <entry field="true" id="8388927" symbol="SECONDS_PER_YEAR"/>
 <entry id="8389418" object="true" symbol="CommonData"/>
 <entry id="8389114" method="true" symbol="getType"/>
@@ -204,7 +212,7 @@
 <entry id="8389184" method="true" symbol="drawLine"/>
 <entry id="8389250" symbol="timestamp"/>
 <entry id="8388877" method="true" symbol="createSession"/>
-<entry field="true" id="39" symbol="LauncherIcon"/>
+<entry field="true" id="41" symbol="LauncherIcon"/>
 <entry id="8388616" module="true" symbol="Toybox_Communications"/>
 <entry field="true" id="8389380" symbol="OBSCURE_TOP"/>
 <entry field="true" id="8389201" symbol="MSG_ID_SEARCH_TIMEOUT"/>
@@ -317,7 +325,7 @@
 <entry id="8389142" method="true" symbol="getProfile"/>
 <entry id="8389188" method="true" symbol="fillRectangle"/>
 <entry id="8388729" object="true" symbol="Info"/>
-<entry id="38" module="true" symbol="Layouts"/>
+<entry id="40" module="true" symbol="Layouts"/>
 <entry id="8388710" object="true" symbol="Stats"/>
 <entry field="true" id="8389152" symbol="FONT_XTINY"/>
 <entry id="8389189" method="true" symbol="fillRoundedRectangle"/>
@@ -362,7 +370,7 @@
 <entry field="true" id="8389381" symbol="OBSCURE_RIGHT"/>
 <entry id="8388714" method="true" symbol="getClockTime"/>
 <entry id="8388775" method="true" symbol="toNumber"/>
-<entry id="33" method="true" symbol="calculateBattery"/>
+<entry id="35" method="true" symbol="calculateBattery"/>
 <entry id="8389554" method="true" symbol="onKeyReleased"/>
 <entry id="8389355" symbol="&lt;eng&gt;"/>
 <entry field="true" id="8388860" symbol="SUB_SPORT_RECUMBENT"/>
@@ -424,7 +432,7 @@
 <entry id="8389251" method="true" symbol="getPayload"/>
 <entry id="8388925" symbol="monthHash"/>
 <entry id="8388643" module="true" symbol="Sensor"/>
-<entry id="35" method="true" symbol="computeAverageSpeed"/>
+<entry id="37" method="true" symbol="computeAverageSpeed"/>
 <entry id="8388987" method="true" symbol="vibrate"/>
 <entry id="8388905" method="true" symbol="tan"/>
 <entry id="8388766" object="true" symbol="Array"/>
@@ -457,13 +465,13 @@
 <entry field="true" id="8388856" symbol="SUB_SPORT_INDOOR_CYCLING"/>
 <entry field="true" id="8389382" symbol="OBSCURE_BOTTOM"/>
 <entry id="8389287" method="true" symbol="saveProperties"/>
-<entry id="32" method="true" symbol="calculateElapsedTime"/>
+<entry id="34" method="true" symbol="calculateElapsedTime"/>
 <entry field="true" id="8388727" symbol="totalMemory"/>
 <entry field="true" id="8389400" symbol="tonesOn"/>
 <entry field="true" id="8388756" symbol="averageDistance"/>
 <entry id="8389494" method="true" symbol="setUserProfile"/>
 <entry id="8389377" method="true" symbol="onExitSleep"/>
-<entry id="31" method="true" symbol="calculateDistance"/>
+<entry id="33" method="true" symbol="calculateDistance"/>
 <entry id="8388941" symbol="mDateTime"/>
 <entry id="8388799" method="true" symbol="toUpper"/>
 <entry id="8388681" method="true" symbol="testDecr"/>
@@ -541,6 +549,7 @@
 <entry id="8389350" module="true" symbol="globals"/>
 <entry field="true" id="8389015" symbol="SWIPE_UP"/>
 <entry field="true" id="8389530" symbol="userProfileExchangeSupport"/>
+<entry id="32" method="true" symbol="calculateHeartRate"/>
 <entry id="8389236" object="true" symbol="Message"/>
 <entry field="true" id="8388740" symbol="maxSpeed"/>
 <entry id="8389322" symbol="april"/>
@@ -571,7 +580,7 @@
 <entry field="true" id="8389311" symbol="accuracy"/>
 <entry field="true" id="8389218" symbol="MSG_CODE_EVENT_TX"/>
 <entry id="8389277" symbol="mProperties"/>
-<entry id="27" method="true" symbol="drawHeaders"/>
+<entry id="28" method="true" symbol="drawHeaders"/>
 <entry field="true" id="8389461" symbol="WEIGHT_SCALE_STATUS_COMPLETE"/>
 <entry id="8389439" object="true" symbol="BikePower"/>
 <entry field="true" id="8389572" symbol="mPassed"/>
@@ -595,7 +604,7 @@
 <entry id="8388617" module="true" symbol="Toybox_ActivityRecording"/>
 <entry id="8388986" object="true" symbol="VibeProfile"/>
 <entry id="8389014" object="true" symbol="ClickEvent"/>
-<entry id="28" method="true" symbol="drawValues"/>
+<entry id="29" method="true" symbol="drawValues"/>
 <entry field="true" id="8388732" symbol="elapsedTime"/>
 <entry id="8389256" method="true" symbol="open"/>
 <entry id="8388653" method="true" symbol="testGeometryIterator"/>
@@ -616,8 +625,8 @@
 <entry id="8388686" method="true" symbol="testLocationDegree"/>
 <entry id="8389368" symbol="&lt;slv&gt;"/>
 <entry id="8388741" symbol="currentPace"/>
-<entry field="true" id="25" symbol="y2"/>
-<entry field="true" id="24" symbol="y1"/>
+<entry field="true" id="26" symbol="y2"/>
+<entry field="true" id="25" symbol="y1"/>
 <entry field="true" id="8389415" symbol="BATT_STATUS_CRITICAL"/>
 <entry id="8389058" object="true" symbol="Drawable"/>
 <entry field="true" id="21" symbol="paceData"/>
@@ -661,8 +670,8 @@
 <entry id="8388908" object="true" symbol="History"/>
 <entry field="true" id="8388731" symbol="startTime"/>
 <entry field="true" id="8388721" symbol="min"/>
-<entry id="36" method="true" symbol="getFormattedDate"/>
-<entry id="34" method="true" symbol="getMinutesPerKm"/>
+<entry id="38" method="true" symbol="getFormattedDate"/>
+<entry id="36" method="true" symbol="getMinutesPerKm"/>
 <entry field="true" id="8389197" symbol="MSG_ID_UNASSIGN_CHANNEL"/>
 <entry id="8389278" symbol="mPropertiesChanged"/>
 <entry field="true" id="8388970" symbol="TONE_ALERT_HI"/>
@@ -694,7 +703,7 @@
 <entry field="true" id="8389171" symbol="COLOR_TRANSPARENT"/>
 <entry field="true" id="8389231" symbol="CHANNEL_TYPE_TX_NOT_RX"/>
 <entry id="8388625" module="true" symbol="Toybox_WatchUi"/>
-<entry id="26" method="true" symbol="drawGrid"/>
+<entry id="27" method="true" symbol="drawGrid"/>
 <entry id="8389042" object="true" symbol="NumberPickerDelegate"/>
 <entry field="true" id="8389175" symbol="TEXT_JUSTIFY_VCENTER"/>
 <entry id="8389372" symbol="&lt;chs&gt;"/>
@@ -703,7 +712,7 @@
 <entry field="true" id="8389557" symbol="KEY_PAGE"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
 <entry field="true" id="8388870" symbol="SUB_SPORT_STRENGTH_TRAINING"/>
-<entry id="30" method="true" symbol="calculatePace"/>
+<entry id="31" method="true" symbol="calculatePace"/>
 <entry field="true" id="8388858" symbol="SUB_SPORT_MOUNTAIN"/>
 <entry id="8389141" object="true" symbol="Profile"/>
 <entry id="8389573" method="true" symbol="passed"/>
@@ -917,6 +926,7 @@
 <entry id="8389488" symbol="DEVICE_TYPE_WEIGHT_SCALE"/>
 <entry id="8389179" method="true" symbol="drawEllipse"/>
 <entry field="true" id="8389379" symbol="OBSCURE_LEFT"/>
+<entry field="true" id="22" symbol="hr"/>
 <entry id="8388820" object="true" symbol="MailboxIterator"/>
 <entry field="true" id="8388917" symbol="FORMAT_SHORT"/>
 <entry id="8388791" method="true" symbol="remove"/>
@@ -949,7 +959,7 @@
 <entry field="true" id="8389214" symbol="MSG_ID_CHANNEL_RESPONSE_EVENT"/>
 <entry id="8389356" symbol="&lt;fin&gt;"/>
 <entry id="8389276" object="true" symbol="AppBase"/>
-<entry id="29" method="true" symbol="drawBattery"/>
+<entry id="30" method="true" symbol="drawBattery"/>
 <entry id="8389510" symbol="DEVICE_TYPE_BIKE_POWER"/>
 <entry field="true" id="8389034" symbol="NUMBER_PICKER_TIME"/>
 <entry id="8388646" module="true" object="true" symbol="Timer"/>
@@ -1004,8 +1014,8 @@
 <entry field="true" id="8388990" symbol="KEY_POWER"/>
 <entry field="true" id="8388809" symbol="BLE_CONNECTION_UNAVAILABLE"/>
 <entry id="8389438" object="true" symbol="TorqueEfficiency"/>
-<entry field="true" id="23" symbol="y"/>
-<entry field="true" id="22" symbol="x"/>
+<entry field="true" id="24" symbol="y"/>
+<entry field="true" id="23" symbol="x"/>
 <entry field="true" id="8389246" symbol="transmissionType"/>
 <entry id="8388882" method="true" symbol="save"/>
 <entry field="true" id="8389527" symbol="operatingTime"/>
@@ -1149,6 +1159,10 @@
 <documentation/>
 </functionEntry>
 <functionEntry name="calculatePace">
+<param id="info"/>
+<documentation/>
+</functionEntry>
+<functionEntry name="calculateHeartRate">
 <param id="info"/>
 <documentation/>
 </functionEntry>
