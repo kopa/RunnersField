@@ -14,7 +14,7 @@ class RunnersView extends Ui.DataField {
     var paceData = new DataQueue(AVERAGE_SAMPLE_SIZE);
     var hr = 0;
     var distance = "0.0";
-    var elapsedTime = "0.0";
+    var elapsedTime = "0:0";
     var battery = 0;
     var x;
     var y;
