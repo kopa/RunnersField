@@ -4,29 +4,31 @@ using Toybox.Time as Time;
 using Toybox.Time.Gregorian as Calendar;
 using Toybox.System as System;
 
-//! A DataField that shows some infos
+//! A DataField that shows some infos.
+//!
+//! @author Konrad Paumann
 class RunnersView extends Ui.DataField {
 
-    var CENTER = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
-    var AVERAGE_SAMPLE_SIZE = 10;
-    var HEADER_FONT = Graphics.FONT_XTINY;
-    var VALUE_FONT = Graphics.FONT_NUMBER_MILD;
-    var ZERO_TIME = "0:00";
-    var ZERO_DISTANCE = "0.00";
+    hidden const CENTER = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
+    hidden const AVERAGE_SAMPLE_SIZE = 10;
+    hidden const HEADER_FONT = Graphics.FONT_XTINY;
+    hidden const VALUE_FONT = Graphics.FONT_NUMBER_MEDIUM;
+    hidden const ZERO_TIME = "0:00";
+    hidden const ZERO_DISTANCE = "0.00";
     
-    var paceData = new DataQueue(AVERAGE_SAMPLE_SIZE);
+    hidden var paceData = new DataQueue(AVERAGE_SAMPLE_SIZE);
+    hidden var tenSecondsPace = ZERO_TIME;
+    hidden var averageInfoPace = ZERO_TIME;
+    hidden var hr = 0;
+    hidden var distance = ZERO_DISTANCE;
+    hidden var elapsedTime = ZERO_TIME;
+    hidden var battery = 0;
+    hidden var gpsSignal = 0; //Position 0 not avail ... 4 good
+    hidden var x;
+    hidden var y;
+    hidden var y1;
+    hidden var y2;
     
-    var tenSecondsPace = ZERO_TIME;
-    var averageInfoPace = ZERO_TIME;
-    var hr = 0;
-    var distance = ZERO_DISTANCE;
-    var elapsedTime = ZERO_TIME;
-    var battery = 0;
-    var x;
-    var y;
-    var y1;
-    var y2;
-
     function initialize() {
     }
 
@@ -42,22 +44,22 @@ class RunnersView extends Ui.DataField {
         calculateElapsedTime(info);
         
         calculateBattery();
+        
+        calculateGpsSignal(info);
     }
     
     function onUpdate(dc) {
-        
-        drawGrid(dc);    
-        
-        drawHeaders(dc);
-        
         drawValues(dc);
+        drawHeaders(dc);
+        drawGrid(dc);
+        drawGps(dc);    
     }
     
     function onLayout(dc) {
         // calculate values for grid
-        y = dc.getHeight() / 2;
-        y1 = dc.getHeight() / 4;
-        y2 = dc.getHeight() - y1;
+        y = dc.getHeight() / 2 + 5;
+        y1 = dc.getHeight() / 4.7 + 5;
+        y2 = dc.getHeight() - y1 + 10;
         x = dc.getWidth() / 2;
     }
     
@@ -69,48 +71,64 @@ class RunnersView extends Ui.DataField {
 
     function drawGrid(dc) {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_WHITE);
+        dc.setPenWidth(2);
         dc.drawLine(0, y1, dc.getWidth(), y1);
         dc.drawLine(0, y, dc.getWidth(), y);
         dc.drawLine(x, y, x, y2);
-        dc.drawLine(x-30, y1, x-30, y); 
-        dc.drawLine(x+30, y1, x+30, y); 
-        dc.drawLine(0, y2, dc.getWidth(), y2);      
+        dc.drawLine(x-27, y1, x-27, y); 
+        dc.drawLine(x+27, y1, x+27, y); 
+        dc.drawLine(0, y2, dc.getWidth(), y2);  
+        dc.setPenWidth(1);    
     }
 
     function drawHeaders(dc) {
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.drawText(x, 9, HEADER_FONT, "time", CENTER);
-        dc.drawText(dc.getWidth() / 6, y / 1.7, HEADER_FONT, "pace", CENTER);
-        dc.drawText(dc.getWidth() / 4, y + (y / 8.8), HEADER_FONT, "avg pace", CENTER);
-        dc.drawText(x, y / 1.7, HEADER_FONT, "hr", CENTER); 
-        dc.drawText(dc.getWidth() * 0.80, y / 1.7, HEADER_FONT, "distance", CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y + (y / 8.8), HEADER_FONT, "timer", CENTER);
-        dc.drawText(x, y2 + 9, HEADER_FONT, "battery", CENTER);
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE);
+        //dc.drawText(x, 8, HEADER_FONT, "TIME", CENTER);
+        dc.drawText(dc.getWidth() / 4.7, y - 10, HEADER_FONT, "PACE", CENTER);
+        dc.drawText(dc.getWidth() * 0.28, y2 - 10, HEADER_FONT, "AVG PACE", CENTER);
+        dc.drawText(x, y - 10, HEADER_FONT, "HR", CENTER); 
+        dc.drawText(dc.getWidth() * 0.80, y - 10, HEADER_FONT, "DISTANCE", CENTER);
+        dc.drawText(dc.getWidth() * 0.74, y2 - 10, HEADER_FONT, "TIMER", CENTER);
+        //dc.drawText(x, y2 + 9, HEADER_FONT, "battery", CENTER);
     }
     
     function drawValues(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.drawText(x, 33, VALUE_FONT, getFormattedDate(Time.now()), CENTER);
-        dc.drawText(dc.getWidth() / 6, y / 1.2, VALUE_FONT, tenSecondsPace, CENTER);
-        dc.drawText(x, y / 1.2, VALUE_FONT, hr.format("%d"), CENTER);
-        dc.drawText(dc.getWidth() / 4, y + (y / 3.1), VALUE_FONT, averageInfoPace, CENTER);
-        dc.drawText(dc.getWidth() * 0.80, y / 1.2, VALUE_FONT, distance, CENTER);
-        dc.drawText(dc.getWidth() * 0.75, y + (y / 3.1), VALUE_FONT, elapsedTime, CENTER);
-        dc.drawText(x + 25, y2 + 29, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
-        drawBattery(dc);
+        dc.drawText(dc.getWidth() / 4.7, y1 + 21, VALUE_FONT, tenSecondsPace, CENTER);
+        dc.drawText(x, y1 + 21, VALUE_FONT, hr.format("%d"), CENTER);
+        dc.drawText(dc.getWidth() * 0.26, y + 21, VALUE_FONT, averageInfoPace, CENTER);
+        dc.drawText(dc.getWidth() * 0.79, y1 + 21, VALUE_FONT, distance, CENTER);
+        dc.drawText(dc.getWidth() * 0.74, y + 21, VALUE_FONT, elapsedTime, CENTER);
         
+        dc.drawText(x, 25, Graphics.FONT_MEDIUM, getFormattedDate(Time.now()), CENTER);
+        drawBattery(dc);
+    }
+    
+    function drawGps(dc) {
+        if (gpsSignal == 3 || gpsSignal == 4) {
+            dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_WHITE);
+        } else {
+            dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
+        }
+        
+        dc.drawText(x + 30, y2 + 14, HEADER_FONT, "GPS", CENTER);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
     }
     
     function drawBattery(dc) {
-        dc.drawRectangle(x-35, y2 + 23, 35, 15);
-        dc.drawRectangle(x-34, y2 + 24, 33, 13);
+        var yStart = y2 + 8;
+        var xStart = x - 40;
+        dc.drawRectangle(xStart, yStart, 35, 15);
+        dc.drawRectangle(xStart + 1, yStart + 1, 33, 13);
         dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_WHITE);
         for (var i = 0; i < (28 * battery / 100); i = i + 3) {
-            dc.fillRectangle(x-32 + i, y2 + 26, 2, 9);    
+            dc.fillRectangle(xStart + 3 + i, yStart + 3, 2, 9);    
         }
              
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.fillRectangle(x-1, y2+26, 4, 9);
+        dc.fillRectangle(xStart + 34, yStart + 3, 4, 9);
+        
+        //dc.drawText(xStart + 60, yStart + 6, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
     }
 
     function calculatePace(info) {
@@ -165,8 +183,12 @@ class RunnersView extends Ui.DataField {
         battery = System.getSystemStats().battery;
     }
 
+    function calculateGpsSignal(info) {
+        gpsSignal = info.currentLocationAccuracy;
+    }
+
     function getMinutesPerKm(speedMetersPerSecond) {
-        if (speedMetersPerSecond > 0.0) {
+        if (speedMetersPerSecond != null && speedMetersPerSecond > 0.0) {
             var metersPerMinute = speedMetersPerSecond * 60.0;
             var minutesPerKmDecimal = 1000.0 / metersPerMinute;
             var minutesPerKmFloor = minutesPerKmDecimal.toNumber();
@@ -177,16 +199,17 @@ class RunnersView extends Ui.DataField {
     }
     
     function computeAverageSpeed() {
-        var s = paceData.getSize();
+        var size = 0;
         var data = paceData.getData();
         var sumOfData = 0.0;
-        for (var i = 0; i < s; i++) {
+        for (var i = 0; i < data.size(); i++) {
             if (data[i] != null) {
                 sumOfData = sumOfData + data[i];
+                size++;
             }
         }
         if (sumOfData > 0) {
-            return sumOfData / s;
+            return sumOfData / size;
         }
         return 0.0;
     }
