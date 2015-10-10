@@ -28,13 +28,16 @@ class RunnersView extends Ui.DataField {
     hidden var y;
     hidden var y1;
     hidden var y2;
+    hidden var kmOrMileInMeters = 1000;
+    hidden var is24Hour = true;
+    hidden var distanceUnits = System.UNIT_METRIC;
     
     function initialize() {
+        setDeviceSettingsDependentVariables();
     }
 
     //! The given info object contains all the current workout
     function compute(info) {
-        
         calculatePace(info);
         
         calculateHeartRate(info);
@@ -69,6 +72,16 @@ class RunnersView extends Ui.DataField {
     //! function onShow() {}
     //! function onHide() {}
 
+    function setDeviceSettingsDependentVariables() {
+        distanceUnits = System.getDeviceSettings().distanceUnits;
+        if (distanceUnits == System.UNIT_METRIC) {
+            kmOrMileInMeters = 1000;
+        } else {
+            kmOrMileInMeters = 1610;
+        }
+        is24Hour = System.getDeviceSettings().is24Hour;
+    }
+
     function drawGrid(dc) {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_WHITE);
         dc.setPenWidth(2);
@@ -90,18 +103,27 @@ class RunnersView extends Ui.DataField {
         dc.drawText(dc.getWidth() * 0.80, y - 10, HEADER_FONT, "DISTANCE", CENTER);
         dc.drawText(dc.getWidth() * 0.74, y2 - 10, HEADER_FONT, "TIMER", CENTER);
         //dc.drawText(x, y2 + 9, HEADER_FONT, "battery", CENTER);
+        dc.drawText(dc.getWidth() / 2, y2 + 31, HEADER_FONT, distanceUnits == System.UNIT_METRIC ? "metric" : "statute", CENTER);
     }
     
     function drawValues(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         dc.drawText(dc.getWidth() / 4.7, y1 + 21, VALUE_FONT, tenSecondsPace, CENTER);
-        dc.drawText(x, y1 + 21, VALUE_FONT, hr.format("%d"), CENTER);
+        
+        drawHeartRate(dc);
+        
         dc.drawText(dc.getWidth() * 0.26, y + 21, VALUE_FONT, averageInfoPace, CENTER);
         dc.drawText(dc.getWidth() * 0.79, y1 + 21, VALUE_FONT, distance, CENTER);
         dc.drawText(dc.getWidth() * 0.74, y + 21, VALUE_FONT, elapsedTime, CENTER);
         
         dc.drawText(x, 25, Graphics.FONT_MEDIUM, getFormattedDate(Time.now()), CENTER);
         drawBattery(dc);
+    }
+    
+    function drawHeartRate(dc) {
+        dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
+        dc.drawText(x, y1 + 21, VALUE_FONT, hr.format("%d"), CENTER);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
     }
     
     function drawGps(dc) {
@@ -111,7 +133,7 @@ class RunnersView extends Ui.DataField {
             dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
         }
         
-        dc.drawText(x + 30, y2 + 14, HEADER_FONT, "GPS", CENTER);
+        dc.drawText(x + 28, y2 + 14, HEADER_FONT, "GPS", CENTER);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
     }
     
@@ -135,8 +157,8 @@ class RunnersView extends Ui.DataField {
         var currentSpeed = info.currentSpeed;
         if (currentSpeed != null) {
             paceData.add(info.currentSpeed);
-            tenSecondsPace = getMinutesPerKm(computeAverageSpeed());
-            averageInfoPace = getMinutesPerKm(info.averageSpeed);
+            tenSecondsPace = getMinutesPerKmOrMile(computeAverageSpeed());
+            averageInfoPace = getMinutesPerKmOrMile(info.averageSpeed);
         } else {
             paceData.reset();
             tenSecondsPace = ZERO_TIME;
@@ -153,10 +175,8 @@ class RunnersView extends Ui.DataField {
 
     function calculateDistance(info) {
         if (info.elapsedDistance != null && info.elapsedDistance > 0) {
-            var distanceKm = info.elapsedDistance / 1000;
-            var distanceFullString = distanceKm.toString();
-            var commaPos = distanceFullString.find(".");
-            distance = distanceFullString.substring(0, commaPos + 3);
+            var distanceKmOrMiles = info.elapsedDistance / kmOrMileInMeters;
+            distance = distanceKmOrMiles.format("%.2f");
         }
     }
     
@@ -187,13 +207,13 @@ class RunnersView extends Ui.DataField {
         gpsSignal = info.currentLocationAccuracy;
     }
 
-    function getMinutesPerKm(speedMetersPerSecond) {
+    function getMinutesPerKmOrMile(speedMetersPerSecond) {
         if (speedMetersPerSecond != null && speedMetersPerSecond > 0.0) {
             var metersPerMinute = speedMetersPerSecond * 60.0;
-            var minutesPerKmDecimal = 1000.0 / metersPerMinute;
-            var minutesPerKmFloor = minutesPerKmDecimal.toNumber();
-            var seconds = (minutesPerKmDecimal - minutesPerKmFloor) * 60;
-            return minutesPerKmDecimal.format("%2d") + ":" + seconds.format("%02d");
+            var minutesPerKmOrMilesDecimal = kmOrMileInMeters / metersPerMinute;
+            var minutesPerKmOrMilesFloor = minutesPerKmOrMilesDecimal.toNumber();
+            var seconds = (minutesPerKmOrMilesDecimal - minutesPerKmOrMilesFloor) * 60;
+            return minutesPerKmOrMilesDecimal.format("%2d") + ":" + seconds.format("%02d");
         }
         return ZERO_TIME;
     }
@@ -216,8 +236,22 @@ class RunnersView extends Ui.DataField {
     
     function getFormattedDate(moment) {
         var date = Calendar.info(moment, 0);
-        var formattedDate = format("$1$:$2$",[date.hour, date.min.format("%02d")]);
+        var formattedDate;
+        if (is24Hour) {
+            formattedDate = format("$1$:$2$",[date.hour, date.min.format("%02d")]);
+        } else {
+            formattedDate = format("$1$:$2$ " + (date.hour < 12 ? "am" : "pm"),[formatHour(date.hour), date.min.format("%02d")]);
+        }
         return formattedDate;
     }
-
+    
+    function formatHour(hour) {
+        if (hour < 1) {
+            return hour + 12;
+        }
+        if (hour >  12) {
+            return hour - 12;
+        }
+        return hour;      
+    }
 }
