@@ -142,7 +142,11 @@ class RunnersView extends Ui.DataField {
         var xStart = x - 40;
         dc.drawRectangle(xStart, yStart, 35, 15);
         dc.drawRectangle(xStart + 1, yStart + 1, 33, 13);
-        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_WHITE);
+        if (battery < 10) {
+            dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
+        } else {
+            dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_WHITE);
+        }
         for (var i = 0; i < (28 * battery / 100); i = i + 3) {
             dc.fillRectangle(xStart + 3 + i, yStart + 3, 2, 9);    
         }
