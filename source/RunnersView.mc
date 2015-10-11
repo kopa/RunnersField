@@ -102,7 +102,6 @@ class RunnersView extends Ui.DataField {
         dc.drawText(x, y - 10, HEADER_FONT, "HR", CENTER); 
         dc.drawText(dc.getWidth() * 0.80, y - 10, HEADER_FONT, "DISTANCE", CENTER);
         dc.drawText(dc.getWidth() * 0.74, y2 - 10, HEADER_FONT, "TIMER", CENTER);
-        //dc.drawText(x, y2 + 9, HEADER_FONT, "battery", CENTER);
         dc.drawText(dc.getWidth() / 2, y2 + 31, HEADER_FONT, distanceUnits == System.UNIT_METRIC ? "metric" : "statute", CENTER);
     }
     
@@ -133,28 +132,37 @@ class RunnersView extends Ui.DataField {
             dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
         }
         
-        dc.drawText(x + 28, y2 + 14, HEADER_FONT, "GPS", CENTER);
+        dc.drawText(x + 28, y2 + 13, HEADER_FONT, "GPS", CENTER);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
     }
     
     function drawBattery(dc) {
-        var yStart = y2 + 8;
+        var yStart = y2 + 6;
         var xStart = x - 40;
-        dc.drawRectangle(xStart, yStart, 35, 15);
-        dc.drawRectangle(xStart + 1, yStart + 1, 33, 13);
+        var length = 35;
+        var height = 17;
+        var batteryColor = Graphics.COLOR_DK_GREEN;
+        
+        if (battery < 10) {
+            batteryColor = Graphics.COLOR_DK_RED;
+            dc.setColor(batteryColor, Graphics.COLOR_WHITE);
+            dc.drawText(xStart + 20, yStart + 7, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
+        }
+        
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+        dc.drawRectangle(xStart, yStart, length, height);
+        dc.drawRectangle(xStart + 1, yStart + 1, length - 2, height - 2);
         if (battery < 10) {
             dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_WHITE);
         } else {
             dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_WHITE);
         }
-        for (var i = 0; i < (28 * battery / 100); i = i + 3) {
-            dc.fillRectangle(xStart + 3 + i, yStart + 3, 2, 9);    
+        for (var i = 0; i < ((length - 7) * battery / 100); i = i + 3) {
+            dc.fillRectangle(xStart + 3 + i, yStart + 3, 2, height - 6);    
         }
              
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-        dc.fillRectangle(xStart + 34, yStart + 3, 4, 9);
-        
-        //dc.drawText(xStart + 60, yStart + 6, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
+        dc.fillRectangle(xStart + length - 1, yStart + 3, length - 31, height - 6);
     }
 
     function calculatePace(info) {
