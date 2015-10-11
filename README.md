@@ -6,6 +6,23 @@ Release versions are published in the [Garmin App Store](https://apps.garmin.com
 
 Feedback: https://forums.garmin.com/showthread.php?327411-DataFields-RunnersField
 
+## Changelog 1.0.1:
+
+* Time mode is now dependent on device settings (12/24 hours mode)
+* Distance and pace will be presented dependent on device settings (metric [km, km/min] or statute [miles, miles/min]), "metric" or "statute" will be shown below battery/gps
+* HR is now dark red to visually decipher the different values faster
+
+## Changelog 1.0.0:
+
+* Time of day
+* Current Pace (average over 10 seconds)
+* Average Pace
+* Heart Rate
+* Distance
+* Timer
+* Battery Status
+* GPS Status (green = gps lock, red = no gps lock)
+
 ## Install Instructions:
 
 A Data Field needs to be set up within the settings for a given activity (like Run)
