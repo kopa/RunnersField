@@ -220,7 +220,7 @@ class RunnersView extends Ui.DataField {
     }
 
     function getMinutesPerKmOrMile(speedMetersPerSecond) {
-        if (speedMetersPerSecond != null && speedMetersPerSecond > 0.0) {
+        if (speedMetersPerSecond != null && speedMetersPerSecond > 0.2) {
             var metersPerMinute = speedMetersPerSecond * 60.0;
             var minutesPerKmOrMilesDecimal = kmOrMileInMeters / metersPerMinute;
             var minutesPerKmOrMilesFloor = minutesPerKmOrMilesDecimal.toNumber();
