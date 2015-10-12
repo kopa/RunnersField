@@ -105,8 +105,8 @@ class RunnersView extends Ui.DataField {
         dc.drawText(dc.getWidth() * 0.28, y2 - 10, HEADER_FONT, "AVG PACE", CENTER);
         dc.drawText(x, y - 10, HEADER_FONT, "HR", CENTER); 
         dc.drawText(dc.getWidth() * 0.80, y - 10, HEADER_FONT, "DISTANCE", CENTER);
-        dc.drawText(dc.getWidth() * 0.74, y2 - 10, HEADER_FONT, "TIMER", CENTER);
-        dc.drawText(dc.getWidth() / 2, y2 + 31, HEADER_FONT, distanceUnits == System.UNIT_METRIC ? "metric" : "statute", CENTER);
+        dc.drawText(dc.getWidth() * 0.74, y2 - 10, HEADER_FONT, "DURATION", CENTER);
+        dc.drawText(dc.getWidth() / 2, y2 + 31, HEADER_FONT, distanceUnits == System.UNIT_METRIC ? "km" : "miles", CENTER);
     }
     
     function drawValues(dc) {
