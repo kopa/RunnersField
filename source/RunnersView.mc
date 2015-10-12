@@ -100,6 +100,7 @@ class RunnersView extends Ui.DataField {
 
     function drawHeaders(dc) {
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_WHITE);
+        //FIXME: get text from resource file if memory limit gets higher - with 1.1.4 and 1.2.0  -> out of memory errror 
         //dc.drawText(x, 8, HEADER_FONT, "TIME", CENTER);
         dc.drawText(dc.getWidth() / 4.7, y - 10, HEADER_FONT, "PACE", CENTER);
         dc.drawText(dc.getWidth() * 0.28, y2 - 10, HEADER_FONT, "AVG PACE", CENTER);
