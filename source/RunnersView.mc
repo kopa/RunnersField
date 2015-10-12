@@ -52,6 +52,10 @@ class RunnersView extends Ui.DataField {
     }
     
     function onUpdate(dc) {
+        //FIXME: this is a hacky workaround. when using sdk 1.2.0 merge branch sdk120
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
+        
         drawValues(dc);
         drawHeaders(dc);
         drawGrid(dc);
