@@ -1,5 +1,5 @@
 # RunnersField
-This is a Data Field for the Fenix 3 that shows multiple values on a single field. 
+This is free a Data Field for the Fenix 3 that shows multiple values on a single field. 
 RunnersField is open source and its code resides at github: https://github.com/kopa/RunnersField
 
 Release versions are published in the [Garmin App Store](https://apps.garmin.com/en-US/apps/8428701b-e621-4156-9d4e-37d92b30151f)
