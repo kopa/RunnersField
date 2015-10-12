@@ -6,6 +6,13 @@ Release versions are published in the [Garmin App Store](https://apps.garmin.com
 
 Feedback: https://forums.garmin.com/showthread.php?327411-DataFields-RunnersField
 
+## Changelog 1.0.2:
+* Fix when black background is configured in device settings.
+* Add battery percentage if < 10% left and make visualization red.
+* Fix irrelevant slow pace values
+* Change string TIMER to DURATION
+* Change string metric to km and statute to miles
+
 ## Changelog 1.0.1:
 
 * Time mode is now dependent on device settings (12/24 hours mode)
