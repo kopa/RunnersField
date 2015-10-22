@@ -9,13 +9,14 @@ https://forums.garmin.com/showthread.php?327411-DataFields-RunnersField
 
 ## Features
 * TIME: 12/24h mode based on system settings.
-* PACE: pace in km/min or miles/min based on system settings (average of the last 10 values)
+* PACE: pace in km/min or mi/min based on system settings (as average of the last 10 values)
 * AVG PACE: average pace over the whole activity
 * DISTANCE: elapsed distance in km or miles based on system settings
 * DURATION: duration of the activity in [hh:]mm:ss
-* GPS: green if good/acceptable signal, red otherwise
-* battery: visualization of battery percentage. If battery value < 10% the exact value will be shown and the green indicator bar turns red 
-* unit system in use: km will be shown when metric system is set in the settings, miles if statute units are configured.
+* GPS: green bars for poor/acceptable/good signal, gray if no signal
+* battery: visualization of battery percentage as indicator bar. 
+  If battery value < 30 the indicator bar gets orange. If value < 10% the exact value will be shown and the indicator bar turns red 
+* unit system in use: "(km)" will be shown when metric system is set in the settings, "(mi)" if statute (imperial) units are configured.
 
 
 ## Install Instructions
@@ -37,6 +38,10 @@ A Data Field needs to be set up within the settings for a given activity (like R
 ## Usage
 Start Run activity.
 Hopefully you see the RunnersField datafield.
+
+## Changelog 1.1
+* Redesign
+* Improved memory footprint
 
 ## Changelog 1.0.2
 * Fix when black background is configured in device settings.
