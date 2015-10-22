@@ -1,4 +1,7 @@
 # RunnersField
+
+![RunnersField Screenshot](/doc/RunnersField1.png)
+
 This is free a Data Field for the Fenix 3 that shows multiple values on a single field. 
 RunnersField is open source and its code resides at github: https://github.com/kopa/RunnersField
 
