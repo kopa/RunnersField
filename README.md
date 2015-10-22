@@ -18,7 +18,7 @@ https://forums.garmin.com/showthread.php?327411-DataFields-RunnersField
 * DURATION: duration of the activity in [hh:]mm:ss
 * GPS: green bars for poor/acceptable/good signal, gray if no signal
 * battery: visualization of battery percentage as indicator bar. 
-  If battery value < 30 the indicator bar gets orange. If value < 10% the exact value will be shown and the indicator bar turns red 
+  If battery value is lower than 30 the indicator bar gets orange. If value is lower than 10% the exact value will be shown and the indicator bar turns red 
 * unit system in use: "(km)" will be shown when metric system is set in the settings, "(mi)" if statute (imperial) units are configured.
 
 
@@ -48,7 +48,7 @@ Hopefully you see the RunnersField datafield.
 
 ## Changelog 1.0.2
 * Fix when black background is configured in device settings.
-* Add battery percentage if < 10% left and make visualization red.
+* Add battery percentage if it is lower than 10% left and make visualization red.
 * Fix irrelevant slow pace values
 * Change string TIMER to DURATION
 * Change string metric to km and statute to miles
