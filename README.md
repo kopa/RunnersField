@@ -42,6 +42,9 @@ A Data Field needs to be set up within the settings for a given activity (like R
 Start Run activity.
 Hopefully you see the RunnersField datafield.
 
+## Changelog 1.1.1
+* Further improved memory footprint
+
 ## Changelog 1.1.0
 * Redesign
 * Improved memory footprint
