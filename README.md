@@ -1,26 +1,33 @@
 # RunnersField
 
-![RunnersField Screenshot](/doc/RunnersField1.png)
+![RunnersField Screenshot Bright](/doc/RunnersField1.png) ![RunnersField Screenshot Dark](/doc/RunnersField3.png)
 
 This is free a Data Field for the Fenix 3 that shows multiple values on a single field. 
 RunnersField is open source and its code resides at github: https://github.com/kopa/RunnersField
 
 Release versions are published in the [Garmin App Store](https://apps.garmin.com/en-US/apps/8428701b-e621-4156-9d4e-37d92b30151f)
 
+===============================================
+
 ## Feedback 
 https://forums.garmin.com/showthread.php?327411-DataFields-RunnersField
 
+===============================================
+
 ## Features
 * TIME: 12/24h mode based on system settings.
-* PACE: pace in km/min or mi/min based on system settings (as average of the last 10 values)
-* AVG PACE: average pace over the whole activity
-* DISTANCE: elapsed distance in km or miles based on system settings
+* PACE: pace in km/min or mi/min based on system settings (as average of the last 10 values).
+* AVG PACE: average pace over the whole activity.
+* DISTANCE: elapsed distance in km or miles based on system settings.
 * DURATION: duration of the activity in [hh:]mm:ss
-* GPS: green bars for poor/acceptable/good signal, gray if no signal
+* GPS: green/blue bars for poor/acceptable/good signal, gray if no signal.
 * battery: visualization of battery percentage as indicator bar. 
-  If battery value is lower than 30 the indicator bar gets orange. If value is lower than 10% the exact value will be shown and the indicator bar turns red 
+  If battery value is lower than 30 the indicator bar gets orange. If value is lower than 10% the exact value will be shown and the indicator bar turns red.
 * unit system in use: "(km)" will be shown when metric system is set in the settings, "(mi)" if statute (imperial) units are configured.
+* use bright or dark color scheme based on the background color setting of the app (Settings/Apps/Run/Background Color).
+  needs at least a firmware with SDK 1.2 compatibility (otherwise bright scheme is always used).
 
+===============================================
 
 ## Install Instructions
 A Data Field needs to be set up within the settings for a given activity (like Run)
@@ -38,9 +45,17 @@ A Data Field needs to be set up within the settings for a given activity (like R
 * Select RunnersField
 * Long Press Down to go back to watch face
 
+===============================================
+
 ## Usage
 Start Run activity.
-Hopefully you see the RunnersField datafield.
+Hopefully you see the RunnersField datafield and can read the values.
+
+===============================================
+
+## Changelog 1.2
+* Use bright/dark color scheme based on app background color settings 
+* Add german language file
 
 ## Changelog 1.1.1
 * Further improved memory footprint
