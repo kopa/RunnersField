@@ -53,7 +53,7 @@ Dann müßten Sie das RunnersField Datenfeld sehen und die Werte ablesen können
 
 ===============================================
 
-## Changelog 1.2
+## Changelog 1.2.0
 * Use bright/dark color scheme based on app background color settings 
 * Add german language file
 
