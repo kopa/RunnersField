@@ -217,12 +217,12 @@ var hasBackgroundColorOption = false;
             dc.setColor(batteryBackground, inactiveGpsBackground);
             dc.fillRectangle(xStart, yStart, width, height);
             if (battery < 10) {
-                dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
                 dc.drawText(xStart+3 + width / 2, yStart + 6, HEADER_FONT, format("$1$%", [battery.format("%d")]), CENTER);
             }
             
             if (battery < 10) {
-                dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT);
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
             } else if (battery < 30) {
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_TRANSPARENT);
             } else {
