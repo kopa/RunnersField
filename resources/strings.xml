@@ -1,0 +1,7 @@
+<resources>
+    <string id="pace">PACE</string>
+    <string id="avgpace">AVG PACE</string>
+    <string id="hr">HR</string>
+    <string id="distance">DIST</string>
+    <string id="duration">DURATION</string>
+</resources>
