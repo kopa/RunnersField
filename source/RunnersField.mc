@@ -70,14 +70,12 @@ var hasBackgroundColorOption = false;
         
         function onLayout(dc) {
             setDeviceSettingsDependentVariables();
-        }
-        
-        function onShow() {
-            setDeviceSettingsDependentVariables();
+            onUpdate(dc);
         }
         
         function onUpdate(dc) {
-            // reset color
+            setColors();
+            // reset background
             dc.setColor(backgroundColor, backgroundColor);
             dc.fillRectangle(0, 0, 218, 218);
             
@@ -92,8 +90,6 @@ var hasBackgroundColorOption = false;
                 kmOrMileInMeters = 1610;
             }
             is24Hour = System.getDeviceSettings().is24Hour;
-            
-            setColors();
             
             paceStr = Ui.loadResource(Rez.Strings.pace);
             avgPaceStr = Ui.loadResource(Rez.Strings.avgpace);
@@ -298,8 +294,8 @@ var hasBackgroundColorOption = false;
         }
     }
     
-//! A circular queue implementation.
-//! @author Konrad Paumann
+	//! A circular queue implementation.
+	//! @author Konrad Paumann
     class DataQueue {
     
         //! the data array.
