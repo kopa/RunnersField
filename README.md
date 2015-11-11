@@ -53,6 +53,12 @@ Hopefully you see the RunnersField datafield and can read the values.
 
 ===============================================
 
+## Changelog 1.2.2
+* fix colorscheme background detection
+
+## Changelog 1.2.1
+* change battery critical color
+
 ## Changelog 1.2.0
 * Use bright/dark color scheme based on app background color settings 
 * Add german language file
