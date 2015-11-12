@@ -53,6 +53,9 @@ Dann müßten Sie das RunnersField Datenfeld sehen und die Werte ablesen können
 
 ===============================================
 
+## Changelog 1.2.3
+* fix app name
+
 ## Changelog 1.2.2
 * fix colorscheme background detection
 

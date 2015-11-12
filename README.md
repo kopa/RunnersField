@@ -53,6 +53,9 @@ Hopefully you see the RunnersField datafield and can read the values.
 
 ===============================================
 
+## Changelog 1.2.3
+* fix app name
+
 ## Changelog 1.2.2
 * fix colorscheme background detection
 

@@ -1,4 +1,5 @@
 <resources>
+	<string id="AppName">RunnersField</string>
     <string id="pace">PACE</string>
     <string id="avgpace">DS PACE</string>
     <string id="hr">PULS</string>
