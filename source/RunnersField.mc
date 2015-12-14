@@ -39,6 +39,9 @@ class RunnersView extends Ui.DataField {
     hidden var paceStr, avgPaceStr, hrStr, distanceStr, durationStr;
     
     hidden var paceData = new DataQueue(10);
+
+	hidden var doUpdates = 0;
+
     hidden var avgSpeed= 0;
     hidden var hr = 0;
     hidden var distance = 0;
@@ -68,10 +71,23 @@ class RunnersView extends Ui.DataField {
     
     function onLayout(dc) {
         setDeviceSettingsDependentVariables();
-        onUpdate(dc);
+        //onUpdate(dc);
+    }
+    
+    function onShow() {
+    	doUpdates = true;
+    	return true;
+    }
+    
+    function onHide() {
+    	doUpdates = false;
     }
     
     function onUpdate(dc) {
+    	if(doUpdates == false) {
+    		return;
+    	}
+    	
         setColors();
         // reset background
         dc.setColor(backgroundColor, backgroundColor);
