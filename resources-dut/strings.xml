@@ -1,0 +1,8 @@
+<resources>
+	<string id="AppName">RunnersField</string>
+    <string id="pace">Snelh.</string>
+    <string id="avgpace">Gem. Snelh.</string>
+    <string id="hr">HS</string>
+    <string id="distance">Afst.</string>
+    <string id="duration">Timer</string>
+</resources>
