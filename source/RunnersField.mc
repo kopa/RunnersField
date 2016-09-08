@@ -63,7 +63,7 @@ class RunnersView extends Ui.DataField {
         elapsedTime = info.elapsedTime != null ? info.elapsedTime : 0;        
         hr = info.currentHeartRate != null ? info.currentHeartRate : 0;
         distance = info.elapsedDistance != null ? info.elapsedDistance : 0;
-        gpsSignal = info.currentLocationAccuracy;
+        gpsSignal = info.currentLocationAccuracy != null ? info.currentLocationAccuracy : 0;
     }
     
     function onLayout(dc) {
