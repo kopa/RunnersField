@@ -67,7 +67,7 @@ class RunnersView extends Ui.DataField {
         }
         
         avgSpeed = info.averageSpeed != null ? info.averageSpeed : 0;
-        elapsedTime = info.elapsedTime != null ? info.elapsedTime : 0;        
+        elapsedTime = info.timerTime != null ? info.timerTime : 0;        
         hr = info.currentHeartRate != null ? info.currentHeartRate : 0;
         distance = info.elapsedDistance != null ? info.elapsedDistance : 0;
         gpsSignal = info.currentLocationAccuracy != null ? info.currentLocationAccuracy : 0;
